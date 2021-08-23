@@ -89,6 +89,24 @@ Le container est t-il toujours en cours d’exécution ?
 3. Lancez un container en background, toujours en lui spécifiant la command ping 8.8.8.8
 Le container est t-il toujours en cours d’exécution ?
 
+**Correction de l'exercice 3**
+
+1. Le container peut être lancé avec la commande suivante :
+
+```bash
+$ docker container run alpine ping 8.8.8.8
+```
+2. La commande 'docker container ls' ne liste pas le container car le processus a été arrêté par la commande CTRL-C
+
+3. La commande suivante permet de lancer le container en background :
+
+```bash
+$ docker container run -d alpine ping 8.8.8.8
+```
+
+> Le conteneur reste en exécution
+
+
 **Exercice 4 : liste des containers**
 Le but de cet exercice est de montrer les différentes options pour lister les containers du
 système
@@ -97,18 +115,79 @@ système
 3. Utilisez l’option -q pour ne lister que les IDs des containers (en cours d’exécution ou
 stoppés)
 
+**Correction de l'exercice 4**:
+1. Pour lister les containers en cours d'execution sur le système, les 2 commandes suivantes sont équivalentes
+   
+```bash
+$ docker container ls
+$ docker ps
+```
+
+> Note: la seconde commande est historique et date de l'époque ou la plateforme Docker était
+principalement utilisée pour la gestion des containers et des images. Par la suite, d'autres
+primitives que nous verrons dans les prochains chapitres ont été ajoutées (volume, network,
+node, ...), ce qui a conduit à une refactorisation de l'api disponible en ligne de commande.
+
+Seuls les containers en cours d'execution sont listés. Les containers qui ont été créés
+puis arrêtés ne sont pas visible dans la sortie de cette commande.
+
+2. Les commandes suivantes permettent de lister les containers en cours d'execution ainsi
+que ceux qui sont stoppés.
+
+```bash
+$ docker container ls -a
+$ docker ps -a
+```
+
+3. Les commandes suivantes permettent de lister les identifiants de l'ensemble des containers tournant sur la machine hôte, ceux en cours d'execution et également ceux qui
+ont été stoppés.
+
+```bash
+$ docker container ls -aq
+$ docker ps -aq
+```
+
+
 **Exercice 5 : exec dans un container**
 Le but de cet exercice est de montrer comment lancer un processus dans un container
 existant
 1. Lancez un container en background, basé sur l’image alpine. Spécifiez la commande
-ping 8.8.8.8
-et le nom ping avec l’option --name
+ping 8.8.8.8 et le nom ping avec l’option --name
 2. Observez les logs du container en utilisant l’ID retourné par la commande précédente ou
 bien le nom du container
 Quittez la commande de logs avec CTRL-C
 3. Lancez un shell sh, en mode interactif, dans le container précédent
 4. Listez les processus du container
 Qu'observez vous par rapport aux identifiants des processus ?
+
+**Correction de l'exercice 5**:
+
+1. Lancez un container en background, basé sur l’image alpine. Spécifiez la commande
+ping 8.8.8.8
+et le nom ping avec l’option --name
+
+```bash
+$ sudo docker container run -d --name ping alpine ping 8.8.8.8
+```
+
+2. observer les logs 
+
+```bash
+$ sudo docker container logs -tf ping
+```
+
+3. Mode interactif :
+
+```bash
+$ sudo docker container exec -it ping /bin/sh
+```
+
+4. Lister les processus
+
+```bash
+# ps -ef
+# top
+```
 
 **Exercice 6 : cleanup**
 Le but de cet exercice est de stopper et de supprimer les containers existants
@@ -119,6 +198,23 @@ stop
 4. Listez les containers arrêtés
 5. Supprimez tous les containers
 6. Vérifiez qu’il n’y a plus de containers
+
+**Correction de l'exercice 6**
+1. Afin de lister les containers qui tournent ainsi que ceux qui ont été arrêtés, il faut utiliser
+l'option -a , les commandes suivantes sont équivalentes:
+
+```bash
+$ docker ps -a
+$ docker container ls -a
+```
+
+2. Stopper tous les conteneurs actifs :
+
+> On va utiliser la substitution de commande pour injecter la liste des conteneurs actif directement dans la commande de stop
+
+```bash
+$ sudo docker container stop $(sudo docker container ls -q)
+```
 
 
 **Exercice 7 : publication de port**

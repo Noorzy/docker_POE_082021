@@ -27,3 +27,19 @@ https://docs.docker.com/engine/install/ubuntu/
     ```bash
     $ sudo docker version
     ```
+
+
+## Aide en ligne de commande 
+
+- Aide sur l'utilisation d'un objet :
+
+   ```bash
+   $ sudo docker image --help
+   $ sudo docker container --help
+   ```
+
+- Aide plus approfondie sur la commande exécutée pour un objet
+
+   ```bash
+   $ sudo docker image ls --help
+   ```

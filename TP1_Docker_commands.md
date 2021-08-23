@@ -216,6 +216,32 @@ $ docker container ls -a
 $ sudo docker container stop $(sudo docker container ls -q)
 ```
 
+3. Vérifiez qu’il n’y a plus de containers actifs
+
+```bash
+$ sudo docker container ls
+$ sudo docker container ls -q
+```
+
+4. Listez les containers arrêtés
+
+```bash
+$ sudo docker container ls -a
+$ sudo docker container ls -a
+```
+
+5. Supprimez tous les containers arrêtés
+
+```bash
+$ sudo docker container rm $(sudo docker container ls -aq)
+```
+
+> Mode prune :
+
+```bash
+$ sudo docker container prune
+```
+
 
 **Exercice 7 : publication de port**
 Le but de cet exercice est de créer un container applicatif nginx en background et en exposant un port sur la machine hôte

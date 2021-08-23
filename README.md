@@ -73,3 +73,28 @@ https://docs.docker.com/engine/install/ubuntu/
     ```bash
     $ sudo docker image ls
     ```
+
+## Containers Docker
+
+- Instanciation d'un conteneur :
+
+```bash
+$ sudo docker container run centos:latest
+```
+
+> Par défaut un conteneur s'instancie, exécute la commande prévue par l'image et s'arrête si plus de processus à l'intérieur
+
+- Instanciation d'un conteneur en modifiant la commande de base prévue par l'image 
+
+```bash
+$ sudo docker container run centos:latest echo "Formation docker"
+Formation docker
+```
+
+- Mode interactif : prise de contrôle dans le conteneur
+
+```bash
+$ sudo docker container run -it centos:latest
+```
+
+

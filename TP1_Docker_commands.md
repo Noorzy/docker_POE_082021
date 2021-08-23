@@ -32,7 +32,7 @@ Le container est t-il toujours en cours d’exécution ?
 **Exercice 4 : liste des containers**
 Le but de cet exercice est de montrer les différentes options pour lister les containers du
 système
-1. Listez les containers en cours d’exécutionEst ce que tous les containers que vous avez créés sont listés ?
+1. Listez les containers en cours d’exécution. Est ce que tous les containers que vous avez créés sont listés ?
 2. Utilisez l’option -a pour voir également les containers qui ont été stoppés
 3. Utilisez l’option -q pour ne lister que les IDs des containers (en cours d’exécution ou
 stoppés)
@@ -78,3 +78,20 @@ Notez l'identifiant du container retourné par la commande précédente.
 2. Inspectez le container en utilisant son identifiant
 3. En utilisant le format Go template, récupérez le nom et l’IP du container
 4. Manipuler les Go template pour récupérer d'autres information
+
+
+
+----
+
+**Correction de l'exercice 1**
+
+1. La commande à lancer est :
+
+
+**Correction de l'exercice 2**
+**Correction de l'exercice 3**
+**Correction de l'exercice 4**
+**Correction de l'exercice 5**
+**Correction de l'exercice 6**
+**Correction de l'exercice 7**
+**Correction de l'exercice 8**

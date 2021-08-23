@@ -98,5 +98,16 @@ $ sudo docker container run -it centos:latest
 ```
 
 
+- Mode détaché (background)
+
+```bash
+$ sudo docker container run -it -d centos:latest ping 8.8.8.8
+```
+
+- Prise de contrôle dans un conteneur déjà démarré
+
+```bash
+$ sudo docker container exec -it {container_name} /bin/bash
+```
 
 

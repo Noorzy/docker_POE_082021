@@ -28,6 +28,17 @@ https://docs.docker.com/engine/install/ubuntu/
     $ sudo docker version
     ```
 
+- Vérification du service docker (daemon docker)
+
+    ```bash
+    $ systemctl status docker
+    ```
+
+- Vérification config du daemon docker 
+
+    ```bash
+    $ sudo docker system info
+    ```
 
 ## Aide en ligne de commande 
 
@@ -43,3 +54,10 @@ https://docs.docker.com/engine/install/ubuntu/
    ```bash
    $ sudo docker image ls --help
    ```
+
+
+## Images docker 
+
+- Docker hub : registry publique
+
+    > https://hub.docker.com/

@@ -61,3 +61,15 @@ https://docs.docker.com/engine/install/ubuntu/
 - Docker hub : registry publique
 
     > https://hub.docker.com/
+
+- Téléchargement d'une image officielle "centos" en local sur le docker host
+
+    ```bash
+    $ sudo docker image pull centos
+    ```
+
+- Lister les images locales
+
+    ```bash
+    $ sudo docker image ls
+    ```

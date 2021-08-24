@@ -150,4 +150,13 @@ https://docs.docker.com/config/containers/container-networking/
 > https://docs.docker.com/storage/volumes/
 
 
+## Networking 
+
+> https://docs.docker.com/network/
+
+- Par défaut, tous les conteneurs instanciés ont le réseau de type bridge docker0 ET sont donc tous dans le même VLAN
+    - Ils peuvent acceder à l'exterieur, on peut les joindre (via une publication de port) ET ils peuvent communiquer entre eux par IP (pas de DNS)
+
+- 
+
 

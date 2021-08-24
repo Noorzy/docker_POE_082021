@@ -27,7 +27,9 @@ Le but de ce TP est d'assimiler les objets docker (image, container, network et 
       -v /chemin/TP_Appli_microservice/php:/srv/http
   - image : phpdockerio/php73-fpm
 
-2) Créer le conteneur mynginx avec les paramètres suivants :
+2) Vérifier le contenu dans le conteneur php
+
+3) Créer le conteneur mynginx avec les paramètres suivants :
 
   - name: mynginx
   - detach

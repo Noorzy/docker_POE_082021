@@ -3,7 +3,7 @@
 1) S'assurer que le réseau **mynetwork** soit créé
 
 ```bash
-$ docker network create mynetwork
+$ sudo docker network create mynetwork
 ```
 
 ## Création d'un micro service de type php - nginx:
@@ -12,7 +12,7 @@ $ docker network create mynetwork
 
    ```bash
      # Attention : adapter le chemin absolu côté docker hote
-     $ docker container run -d --name myphp --network mynetwork -v /vagrant/TP_Appli_microservice/php/:/srv/http/ phpdockerio/php73-fpm
+     $ sudo docker container run -d --name myphp --network mynetwork -v /vagrant/TP_Appli_microservice/php/:/srv/http/ phpdockerio/php73-fpm
    ```
 
 2) Vérifier le contenu dans le conteneur php

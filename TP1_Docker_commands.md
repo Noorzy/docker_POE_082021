@@ -294,4 +294,21 @@ Notez l'identifiant du container retourné par la commande précédente.
 du container sur le port 3000 de la machine host.
 
 ```bash
+$ sudo docker container run -d -p 3000:80 nginx:1.18
+```
+
+2. Inspection 
+
+```bash
+$ sudo docker container inspect aaa01d1df6d5fb41a669ddbff88afc4f24c75a36ca2c383d758c26dbb3a81ac2
+```
+
+3. Format GO template
+
+```bash
+$ sudo docker container inspect -f "{{ .Name }}"  aaa01d1df6d5fb41a
+```
+
+```bash
+$ sudo docker container inspect -f "{{ .NetworkSettings.IPAddress }}" aaa01d1df6d5fb41a
 ```

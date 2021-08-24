@@ -24,7 +24,7 @@ Le but de ce TP est d'assimiler les objets docker (image, container, network et 
   - detach
   - network : mynetwork
   - bind :
-      -v /chemin/TP_Appli_microservice/php:/srv/http
+      -v /vagrant/TP_Appli_microservice/php:/srv/http
   - image : phpdockerio/php73-fpm
 
 2) Vérifier le contenu dans le conteneur php
@@ -35,10 +35,31 @@ Le but de ce TP est d'assimiler les objets docker (image, container, network et 
   - detach
   - network : mynetwork
   - bind :
-      -v /chemin/TP_Appli_microservice/conf/nginx.conf:/etc/nginx/conf.d/default.conf
+      -v /vagrant/TP_Appli_microservice/conf/nginx.conf:/etc/nginx/conf.d/default.conf
   - publication port : 8080:80
   - image : nginx:1.20-alpine
 
 3) Test navigateur :
 
 > http://ip_docker_hote:8080/
+
+## Mise à jour d'un micro-service (mise à jour version)
+
+- On demande de passer en version php74-fpm
+
+???
+
+
+## Ajout d'un micro service de type mariadb :
+
+ - On souhaite integrer une base de données au projet
+
+ > Analyser l'image (dockerhub) mariadb : https://hub.docker.com/_/mariadb
+
+Découverte d'une image **mariadb**
+1. Télécharger l'image mariadb:10.5
+2. Instancier un conteneur à partir de cette image :
+  - name: mybdd
+  - image : mariadb:10.5
+  - network : mynetwork
+  - /!\ variable d'environnement : MARIADB_ROOT_PASSWORD

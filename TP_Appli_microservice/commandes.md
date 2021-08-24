@@ -26,6 +26,8 @@ $ sudo docker network create mynetwork
 3) Créer le conteneur mynginx avec les paramètres suivants :
 
   ```bash
-  $ docker container run -d --name mynginx -p 8080:80 -v /vagrant/TP_Appli_microservice/conf/nginx.conf:/etc/nginx/conf.d/default.conf--network mynetwork nginx:1.20-alpine
+  $ docker container run -d --name mynginx -p 8080:80 -v /vagrant/TP_Appli_microservice/conf/nginx.conf:/etc/nginx/conf.d/default.conf --network mynetwork nginx:1.20-alpine
   $ docker container ls
+  $ sudo docker container exec mynginx cat /etc/nginx/conf.d/default.conf
+  $ sudo docker container logs mynginx
   ```

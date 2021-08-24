@@ -110,4 +110,10 @@ $ sudo docker container run -it -d centos:latest ping 8.8.8.8
 $ sudo docker container exec -it {container_name} /bin/bash
 ```
 
+## Publication de ports
 
+> Permet de mettre à disposition un conteneur applicatif de type web pour les utilisateur extérieur au docker hôte
+
+> Voir TP1 ex7
+
+https://docs.docker.com/config/containers/container-networking/

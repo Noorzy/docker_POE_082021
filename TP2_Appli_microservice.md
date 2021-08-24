@@ -71,3 +71,8 @@ Découverte d'une image **mariadb**
   - image : mariadb:10.5
   - network : mynetwork
   - /!\ variable d'environnement : MARIADB_ROOT_PASSWORD
+
+
+## INtegration du nouveau micro-service mybdd dans le code php
+
+- On modifie le code php et on recharge la page

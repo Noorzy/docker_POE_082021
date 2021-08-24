@@ -47,8 +47,15 @@ Le but de ce TP est d'assimiler les objets docker (image, container, network et 
 
 - On demande de passer en version php74-fpm
 
-???
+juste recréer une nouvelle instance avec l'update qui utilise les mêmes volumes, comme ça on ne perd pas ce qu'on a modifié
 
+pour update php sans perdre les modifs:
+
+```bash
+$ sudo docker container stop myphp
+$ sudo docker container rm myphp
+$ sudo docker container run --name myphp -d --network mynetwork -v /vagrant/TP_Appli_microservice/php:/srv/http phpdockerio/php74-fpm
+```
 
 ## Ajout d'un micro service de type mariadb :
 

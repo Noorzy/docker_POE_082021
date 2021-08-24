@@ -117,3 +117,37 @@ $ sudo docker container exec -it {container_name} /bin/bash
 > Voir TP1 ex7
 
 https://docs.docker.com/config/containers/container-networking/
+
+
+## Ajout de données dans un conteneur : CIBLE -> VOLUME/BIND
+
+1. On peut se connecter dans le conteneur et créer/modifier  des données
+    - /!\ : On écrit dans la layer R/W éphémere donc perdue si destruction du conteneur
+    ```bash
+    $ sudo docker container exec -it amazing_dewdney bash
+    root@aaa01d1df6d5:/# cd /usr/share/nginx/html/
+    root@aaa01d1df6d5:/usr/share/nginx/html# ls -l
+    total 8
+    -rw-r--r-- 1 root root 494 Apr 21  2020 50x.html
+    -rw-r--r-- 1 root root 612 Apr 21  2020 index.html
+    root@aaa01d1df6d5:/usr/share/nginx/html# echo "Coucou from docker" > index.html 
+    root@aaa01d1df6d5:/usr/share/nginx/html# exit
+    ```
+
+2. On peut copier des fichiers dispo sur le docker hote dans un conteneur
+
+    ```bash
+    $ sudo docker container cp nginx/index.html amazing_dewdney:/usr/share/nginx/html/index.html
+    ```
+
+    - /!\ : On écrit dans la layer R/W éphémere donc perdue si destruction du conteneur
+    - On peut retrouver l'état initial, en recréant un conteneur puis en recopier le fichier
+
+3. Se servir des fonctionnalité docker type VOLUME/BIND
+
+> https://docs.docker.com/storage/bind-mounts/
+
+> https://docs.docker.com/storage/volumes/
+
+
+

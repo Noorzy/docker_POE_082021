@@ -260,7 +260,7 @@ Qu’observez-vous ?
 l’hôte
 
 ```bash
-
+$ sudo docker container run -d -p 8080:80 nginx
 ```
 
 2. Vérification
@@ -271,6 +271,12 @@ http://172.28.128.86:8080
 
 3. Lancez un second container en publiant le même port
 Qu’observez-vous ?
+
+> On ne peut pas publier deux fois le même port sur le docker hôte
+
+```bash
+docker: Error response from daemon: driver failed programming external connectivity on endpoint kind_grothendieck (797ba1f6ba5308ab32b198e7b98b7aed88e335abcc312bddc27436fe4d81d037): Bind for 0.0.0.0:8080 failed: port is already allocated.
+```
 
 **Exercice 8 : inspection d'un container Le but de cet exercice est l'inspection d’un container**
 1. Lancez, en background, un nouveau container basé sur nginx:1.18 en publiant le port 80

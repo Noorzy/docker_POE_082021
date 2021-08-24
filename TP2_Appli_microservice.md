@@ -23,7 +23,7 @@ Le but de ce TP est d'assimiler les objets docker (image, container, network et 
   - name: myphp
   - detach
   - network : mynetwork
-  - volume :
+  - bind :
       -v /chemin/TP_Appli_microservice/php:/srv/http
   - image : phpdockerio/php73-fpm
 
@@ -32,7 +32,7 @@ Le but de ce TP est d'assimiler les objets docker (image, container, network et 
   - name: mynginx
   - detach
   - network : mynetwork
-  - volume :
+  - bind :
       -v /chemin/TP_Appli_microservice/conf/nginx.conf:/etc/nginx/conf.d/default.conf
   - publication port : 8080:80
   - image : nginx:1.20-alpine

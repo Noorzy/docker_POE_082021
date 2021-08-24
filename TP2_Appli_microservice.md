@@ -107,4 +107,11 @@ $ sudo docker container restart myphp
 $ sudo docker container commit -a "Pierre" -m "Ajout package mysql php" myphp myphp_mysql:7.4
 $ sudo docker image ls
 ```
+
+> Si on doit réinstancier le conteneur myphp, on utilisera la nouvelle image :
+
+```bash
+$ sudo docker container run --name myphp -d --network mynetwork -v /vagrant/TP_Appli_microservice/php:/srv/http myphp_mysql:7.4
+```
+
 ## Analyse volumes et conteneur mybdd

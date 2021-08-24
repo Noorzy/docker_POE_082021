@@ -91,7 +91,7 @@ Découverte d'une image **mariadb**
   $ apt update && apt install php7.4-mysql
    ```
 
-2. On redémaare le conteneur myphp pour redémarrer l'appli php
+2. On redémarre le conteneur myphp pour redémarrer l'appli php
 
 > /!\ Ne jamais vouloir redémarrer une appli directement dans le conteneur
 

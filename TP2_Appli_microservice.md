@@ -4,7 +4,7 @@ Le but de ce TP est d'assimiler les objets docker (image, container, network et 
 
 ## Creation du projet
 
-1) Dans votre répertoire formationdocker :
+1) Dans votre répertoire formation docker :
 
     - Créer un nouveau répertoire nommé : TP_Appli_microservice
     - A partir du dépot de formation gitlab : https://github.com/psable/docker_POE_082021/tree/master/TP_Appli_microservice

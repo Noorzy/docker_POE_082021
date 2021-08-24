@@ -67,6 +67,7 @@ Découverte d'une image **mariadb**
 1. Télécharger l'image mariadb:10.5
 2. Instancier un conteneur à partir de cette image :
   - name: mybdd
+  - detach
   - image : mariadb:10.5
   - network : mynetwork
   - /!\ variable d'environnement : MARIADB_ROOT_PASSWORD

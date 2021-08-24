@@ -50,4 +50,34 @@ $ sudo docker image pull mariadb:10.5
 
 ```bash
 $ sudo docker container run -d --name mybdd --network mynetwork -e MARIADB_ROOT_PASSWORD=roottor mariadb:10.5
+$ sudo docker container ls
+$ sudo docker container logs mybdd
+```
+
+- Test bdd :
+
+```bash
+$ sudo docker container exec -it mybdd bash
+root@d8ac4f4ccb4a:/# 
+root@d8ac4f4ccb4a:/# 
+root@d8ac4f4ccb4a:/# mysql -u root -proottoor
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 3
+Server version: 10.5.12-MariaDB-1:10.5.12+maria~focal mariadb.org binary distribution
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
++--------------------+
+3 rows in set (0.001 sec)
+
+MariaDB [(none)]>
 ```

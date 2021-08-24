@@ -76,3 +76,17 @@ Découverte d'une image **mariadb**
 ## INtegration du nouveau micro-service mybdd dans le code php
 
 - On modifie le code php et on recharge la page
+
+- /!\ On obtient une erreur PHP : il manque un driver dans l'image phpdockerio/php73-fpm ou phpdockerio/php74-fpm
+
+
+## On va debugger manuellement le pb
+
+- Dans le conteneur myphp, installer manuellement le driver manquent
+
+1. On se connecte dans le conteneur myphp et on install le package manquant :
+
+  ```bash
+  $ sudo docker container exec -it myphp bash
+  $ apt update && apt install php7.4-mysql
+   ```

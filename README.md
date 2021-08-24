@@ -147,7 +147,17 @@ https://docs.docker.com/config/containers/container-networking/
 
 > https://docs.docker.com/storage/bind-mounts/
 
+- EX: 
+    ```bash
+    $ sudo docker container run -d -p 3001:80 -v /vagrant/myweb:/usr/share/nginx/html nginx
+    ```
+
 > https://docs.docker.com/storage/volumes/
+
+- EX:
+    ```bash
+    $ sudo docker container run -d -P -v mynginxvol:/usr/share/nginx/html nginx
+    ```
 
 
 ## Networking 
@@ -157,6 +167,18 @@ https://docs.docker.com/config/containers/container-networking/
 - Par défaut, tous les conteneurs instanciés ont le réseau de type bridge docker0 ET sont donc tous dans le même VLAN
     - Ils peuvent acceder à l'exterieur, on peut les joindre (via une publication de port) ET ils peuvent communiquer entre eux par IP (pas de DNS)
 
-- 
+- Un network bridge "user-define" est un network créé manuellement
+    - Nouveau VLAN dédié
+    - Mecanique DNS mise en place automatiquement avec les noms des conteneurs
+
+- Network type "host" : le conteneur prend la config réseau du docker host
+
+- Network type "none" : le conteneur n'a pas de stack réseau
+
+- EX : création d'un network bridge et instanciation d'un conteneur dans ce network
+    ```bash
+    $ sudo docker network create mynet
+    $ sudo docker container run  --network mynet --name alpine3 -it alpine
+    ```
 
 

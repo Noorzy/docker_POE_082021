@@ -253,13 +253,39 @@ http://ip_docker_host:8080
 Qu’observez-vous ?
 
 
+
+**Correction de l'exercice 7**:
+
+1. Lancez un container basé sur nginx en background (detach) et publiez le port 80 du container sur le port 8080 de
+l’hôte
+
+```bash
+
+```
+
+2. Vérification
+
+```http
+http://172.28.128.86:8080
+```
+
+3. Lancez un second container en publiant le même port
+Qu’observez-vous ?
+
 **Exercice 8 : inspection d'un container Le but de cet exercice est l'inspection d’un container**
 1. Lancez, en background, un nouveau container basé sur nginx:1.18 en publiant le port 80
 du container sur le port 3000 de la machine host.
 Notez l'identifiant du container retourné par la commande précédente.
 2. Inspectez le container en utilisant son identifiant
+    > Mot clé : inspect
 3. En utilisant le format Go template, récupérez le nom et l’IP du container
 4. Manipuler les Go template pour récupérer d'autres information
 
 
+**Correction de l'exercice 8**:
 
+1. Lancez, en background, un nouveau container basé sur nginx:1.18 en publiant le port 80
+du container sur le port 3000 de la machine host.
+
+```bash
+```

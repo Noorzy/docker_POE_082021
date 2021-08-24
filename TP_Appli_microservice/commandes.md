@@ -31,3 +31,23 @@ $ sudo docker network create mynetwork
   $ sudo docker container exec mynginx cat /etc/nginx/conf.d/default.conf
   $ sudo docker container logs mynginx
   ```
+
+## Update php
+
+```bash
+$ sudo docker container stop myphp
+$ sudo docker container rm myphp
+$ sudo docker container run --name myphp -d --network mynetwork -v /vagrant/TP_Appli_microservice/php:/srv/http phpdockerio/php74-fpm
+```
+
+## Ajout mariadb
+
+```bash
+$ sudo docker image pull mariadb:10.5
+```
+
+- Pour ce genre d'application, il faut spécifier au moins une variable d'environnement à l'instanciation du conteneur 
+
+```bash
+$ sudo docker container run -d --name mybdd --network mynetwork -e MARIADB_ROOT_PASSWORD=roottor mariadb:10.5
+```

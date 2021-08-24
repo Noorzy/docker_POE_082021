@@ -98,3 +98,13 @@ Découverte d'une image **mariadb**
 ```bash
 $ sudo docker container restart myphp
 ```
+
+3. Les databases sont correctement vue à présent
+
+4. On fusionne nos modification réalisée dans la layer R/W du conteneur (et qui peut être détruite) dans une nouvelle image qui pourra alors être utiliser en cas de reconstruction
+
+```bash
+$ sudo docker container commit -a "Pierre" -m "Ajout package mysql php" myphp myphp_mysql:7.4
+$ sudo docker image ls
+```
+## Analyse volumes et conteneur mybdd

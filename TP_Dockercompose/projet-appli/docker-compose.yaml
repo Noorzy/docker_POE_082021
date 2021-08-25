@@ -1,5 +1,4 @@
 version: "2.4"
-
 services:
   mynginx:
     container_name: mynginx
@@ -14,6 +13,7 @@ services:
       - myphp
   myphp:
     container_name: myphp
+    # Seule cette image est locale à mon docker hote et donc peut poser pb pour un déploiement sur autre docker hôte
     image: myphp_mysql:7.4
     networks:
       - myappli_net

@@ -212,5 +212,3 @@ https://www.docker.com/blog/intro-guide-to-dockerfile-best-practices/
         - Registry privée docker : https://docs.docker.com/registry/
 
         - => Container registry : cloud (azure, google, ibm), gitlab, harbor
-
-    

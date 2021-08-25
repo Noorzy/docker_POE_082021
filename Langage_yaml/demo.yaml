@@ -1,0 +1,25 @@
+---
+
+# Commentaires
+
+clé: valeur
+
+# Liste
+liste_elements:
+  - premier_element
+  - deuxieme_element
+  - troisieme_element
+
+# Ecriture condensée
+liste_elements_condense: [ 'premier_element', 'deuxieme_element', 'troisieme_element']
+
+# Dictionnaire
+dict:
+  voiture:
+    couleur:
+      - grise
+      - noire
+    porte: 5
+  moto:
+    couloir: bleue
+    porte: 0

@@ -23,3 +23,6 @@ dict:
   moto:
     couloir: bleue
     porte: 0
+
+# version condensée du dictionnaire
+dict2: {voiture: {couleur: grise,porte: 5},moto: {couleur: bleue,porte: 0}}

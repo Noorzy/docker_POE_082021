@@ -212,3 +212,31 @@ https://www.docker.com/blog/intro-guide-to-dockerfile-best-practices/
         - Registry privée docker : https://docs.docker.com/registry/
 
         - => Container registry : cloud (azure, google, ibm), gitlab, harbor
+
+
+## Docker compose
+
+> Description des micro-service à déployer sous forme de fichier yaml
+
+- Intelligence pour la création des objets
+- Beaucoup de possibilités orchestration, les dépendances...
+
+https://docs.docker.com/compose/
+
+1. Téléchargement du binaire :
+
+```bash
+$ sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+```
+
+2. Positionnement des droits :
+
+```bash
+$ sudo chmod +x /usr/local/bin/docker-compose
+```
+
+3. Vérification
+
+```bash
+$ sudo chmod +x /usr/local/bin/docker-compose
+```

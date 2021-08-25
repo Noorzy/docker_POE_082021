@@ -238,5 +238,5 @@ $ sudo chmod +x /usr/local/bin/docker-compose
 3. Vérification
 
 ```bash
-$ sudo chmod +x /usr/local/bin/docker-compose
+$ sudo docker-compose version
 ```

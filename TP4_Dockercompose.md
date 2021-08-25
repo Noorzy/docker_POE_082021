@@ -15,13 +15,13 @@ https://docs.docker.com/compose/compose-file/
         - version: 2.4
         - Block **services** avec un conteneur httpd
             - image : httpd
-            - port publié : 8005
+            - port publié : 8005:80
             - hostname : monweb01
 
 3. Déclencher le docker-compose
 
     - Se positionner dans le répertoire qui contient le fichier docker-compose.yaml
-    
+
     - Commande docker-compose (sudo)
 
     ```bash

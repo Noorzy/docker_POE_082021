@@ -1,0 +1,9 @@
+---
+version: "2.4"
+
+services:
+  httpd:
+    image: httpd:2.4
+    ports:
+      - "8005:80"
+    hostname: monweb01

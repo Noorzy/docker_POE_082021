@@ -17,5 +17,8 @@ WORKDIR ${SRC_DIR}
 
 ENV PYTHONUNBUFFERED=1
 
+# Instruction EXPOSE : spécifier le/les port(s) à mettre à l'écoute et leur protocole
+EXPOSE 8000/tcp
+
 # Instruction CMD -> commande finale à exécuter par le conteneur qui ouvrira cette image
 CMD ["python", "server.py"]

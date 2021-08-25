@@ -8,7 +8,7 @@ https://docs.docker.com/compose/compose-file/
 
     - Créer dans /vagrant u répertoire nommé **TP_Dockercompose**
 
-2. Créer le fichier docker-compose qui instanciera un conteneur apache
+2. Créer le fichier docker-compose.yaml qui instanciera un conteneur apache
 
     - Dans le répertoire **TP_Dockercompose**, créer un répertoire **projet-apache**
     - Dans ce répertoire, créer un fichier docker-compose.yaml avec la description suivante :
@@ -20,6 +20,8 @@ https://docs.docker.com/compose/compose-file/
 
 3. Déclencher le docker-compose
 
+    - Se positionner dans le répertoire qui contient le fichier docker-compose.yaml
+    
     - Commande docker-compose (sudo)
 
     ```bash

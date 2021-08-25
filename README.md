@@ -182,3 +182,10 @@ https://docs.docker.com/config/containers/container-networking/
     ```
 
 
+## Images Docker -> Dockerfile
+
+> Concept : decrire un manifest qui vous permettra de construire une image à vos besoins
+
+https://docs.docker.com/engine/reference/builder/
+
+https://www.docker.com/blog/intro-guide-to-dockerfile-best-practices/

@@ -1,8 +1,11 @@
 ---
 version: "2.4"
 
+# Déclaration des conteneurs
 services:
+  # premier conteneur httpd
   httpd:
+    # image que le conteneur va utiliser
     image: httpd:2.4
     ports:
       - "8005:80"

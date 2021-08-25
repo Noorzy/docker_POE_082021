@@ -189,3 +189,28 @@ https://docs.docker.com/config/containers/container-networking/
 https://docs.docker.com/engine/reference/builder/
 
 https://www.docker.com/blog/intro-guide-to-dockerfile-best-practices/
+
+> Voir les exemple TP_Dockerfiles et les commandes
+
+## Partage images 
+
+- Solution : tar (save load)
+    ```bash
+    $ sudo docker image save -o iperf.tar iperf:1.0
+    ```
+
+- Solution Registry (depot d'images)
+
+    - Publique : Docker hub
+        - Il faut un compte (gratuit ou payant)
+        - Etapes :
+            - login : ```$ docker login```
+            - tag : ```$ sudo docker image tag monalpine:1.0 bilbloke/monalpine:1.0```
+            - push : ```$ sudo docker image push bilbloke/monalpine:1.0```
+
+    - Privée : Cloud - SI
+        - Registry privée docker : https://docs.docker.com/registry/
+
+        - => Container registry : cloud (azure, google, ibm), gitlab, harbor
+
+    
